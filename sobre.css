@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; 
+}
+.contenedor-flexible {
+    display: flex;
+    flex-direction: column;
+    height: 325vh; 
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box; 
+}
+
+header h1 {
+    font-size: 28px;
+    color: rgb(252, 34, 0);
+}
+
+nav a {
+    margin: 0 15px;
+    color: rgb(241, 163, 64);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.clase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    background-image: url('tacos2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.clase p {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.clase button {
+    padding: 12px 24px;
+    background-color: rgb(209, 57, 34);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: none;
+}
+
+
+/* Servicios */
+.servicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 50px 20px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+
+.servicio-zigzag {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.servicio-zigzag img {
+    width: 100%;
+    max-width: 60vh;
+    height: 45vh;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.servicio-zigzag .servicio-texto {
+    max-width: 600px;
+    text-align: center;
+}
+
+.servicio h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(50, 66, 143);
+}
+
+.servicio p {
+    font-size: 16px;
+    color: rgb(22, 22, 22);
+}
+/* Botón Explorar */
+.explorar-btn {
+    padding: 10px 20px;
+    background-color: rgb(114, 193, 24);
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.explorar-btn:hover {
+    background-color: wheat;
+}
+/* Hable con Nosotros */
+.hable-con-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding: 50px 20px;
+    background-color: rgb(140, 167, 51);
+    color: black;
+    box-sizing: border-box;
+}
+
+.hable-con-nosotros h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hable-con-nosotros p {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.hable-con-nosotros button {
+    padding: 12px 24px;
+    background-color: rgb(114, 193, 24);
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hable-con-nosotros button:hover {
+    background-color: wheat;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+}
+/*  tablets */
+@media (min-width: 768px) {
+    .servicio-zigzag {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .servicio-zigzag.invertido {
+        flex-direction: row-reverse;
+    }
+
+    .servicio-zigzag img, .servicio-zigzag .servicio-texto {
+        width: 50%;
+        max-width: 100%;
+    }
+}
+
+/*pantallas grandes */
+@media (min-width: 1024px) {
+    .clase h2 {
+        font-size: 100px;
+        margin-bottom: 100px;
+    }
+
+    .hable-con-nosotros h2 {
+        font-size: 42px;
+    }
+}

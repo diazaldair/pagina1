@@ -1,0 +1,210 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; 
+}
+.contenedor-flexible {
+    display: flex;
+    flex-direction: column;
+    height: 325vh; 
+    background-color: rgb(255, 255, 255);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    box-sizing: border-box; 
+}
+
+header h1 {
+    font-size: 28px;
+    color: rgb(252, 34, 0);
+}
+
+nav a {
+    margin: 0 15px;
+    color: rgb(241, 163, 64);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.clase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 100%;
+    background-image: url('tacos2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.clase h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.clase p {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+.clase button {
+    padding: 12px 24px;
+    background-color: rgb(209, 57, 34);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    border: none;
+}
+
+/* Servicios */
+.servicios {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    background-color: rgb(255, 255, 255);
+    box-sizing: border-box;
+}
+
+.servicio {
+    text-align: center;
+    margin: 20px 0;
+}
+.servicio img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    margin-bottom: 20px;
+    object-fit: cover;
+}
+
+.servicio h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(50, 66, 143);
+}
+
+.servicio p {
+    font-size: 16px;
+    color: rgb(22, 22, 22);
+}
+
+  /* Sobre nosotros */
+.sobre-nosotros {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    padding: 50px;
+    background-color: rgb(255, 255, 255); 
+    box-sizing: border-box; 
+}
+
+.sobre-nosotros-texto {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.sobre-nosotros-texto h2 {
+    font-size: 36px; 
+    font-weight: bold;
+    color: rgb(0, 12, 105); 
+    margin-bottom: 20px; 
+}
+
+.sobre-nosotros-texto p {
+    font-size: 18px; 
+    color: rgb(3, 3, 3); 
+    line-height: 1.6;
+}
+
+.sobre-nosotros-imagen img {
+    width: 100%; 
+    height: auto; 
+    object-fit: cover; 
+    margin-top: 20px; 
+}
+/* Hable con Nosotros */
+.hable-con-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgb(140, 167, 51);
+    color: black;
+    box-sizing: border-box;
+}
+
+.hable-con-nosotros h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hable-con-nosotros p {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.hable-con-nosotros button {
+    padding: 12px 24px;
+    background-color: rgb(114, 193, 24);
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hable-con-nosotros button:hover {
+    background-color: wheat;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+}
+
+/* tablets */
+@media (min-width: 768px) {
+    .servicios {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .servicio {
+        width: 30%;
+    }
+
+    .sobre-nosotros {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sobre-nosotros-texto, .sobre-nosotros-imagen {
+        width: 50%;
+    }
+}
+
+/* pantallas grandes*/
+@media (min-width: 1024px) {
+    .clase h2 {
+        font-size: 100px;
+        margin-bottom: 100px;
+    }
+
+    .hable-con-nosotros h2 {
+        font-size: 42px;
+    }
+}
