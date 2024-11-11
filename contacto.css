@@ -1,7 +1,11 @@
+* {
+    box-sizing: border-box; /* Asegura que padding y bordes no aumenten el ancho */
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    overflow-x: hidden; 
+    overflow-x: hidden; /* Evita el desplazamiento lateral */
 }
 .contenedor-flexible {
     display: flex;
@@ -63,18 +67,21 @@ nav a {
     font-size: 20px;
     border: none;
 }
-
 .container {
     display: flex;
     gap: 50px;
-    width: 100%; /* Ajusta para que ocupe todo el ancho */
-    max-width: 100vw; /* Evita desbordes */
+    width: 100%;
+    max-width: 100%; /* Evita desbordes y ajusta al ancho de la pantalla */
+    padding: 0 10px; /* Ajusta el margen interior para evitar desplazamientos laterales */
 }
+
 .contact-form, .contact-info {
-    background-color:white;
+    background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Asegura que ocupen todo el ancho disponible */
+    max-width: 600px; /* Ancho máximo para evitar que se expandan demasiado en pantallas grandes */
 }
 .contact-form h2, .contact-info h2 {
     font-size: 24px;
@@ -111,6 +118,7 @@ nav a {
 .icons {
     display: flex;
     gap: 10px;
+    justify-content: center; /* Centra los íconos */
     margin-top: 10px;
 }
 .icons a {
@@ -123,4 +131,18 @@ nav a {
     line-height: 24px;
     border-radius: 50%;
     font-size: 16px;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a columna en dispositivos pequeños */
+        gap: 20px;
+        padding: 0; /* Elimina padding lateral en dispositivos pequeños */
+    }
+    .contact-form, .contact-info {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+    .contact-form h2, .contact-info h2 {
+        width: 100%;
+        text-align: center; /* Centra el título */
+    }
 }
